@@ -8,6 +8,7 @@ import LogInModal from '../../Components/General/LogInModal';
 import goToTop from '../../Helpers/goToTop';
 
 const ForumNoUserPage = () => {
+
    useEffect(() => {
       goToTop();
    }, []);
