@@ -20,6 +20,9 @@ import {
 } from '../Assets/Impact/ImpactTexts';
 import { HashLink } from 'react-router-hash-link';
 import goToTop from '../Helpers/goToTop';
+import { MoralisProvider } from "react-moralis";
+
+import MoralisBDQuery from '../Helpers/MoralisBDQuery';
 
 const Impact = () => {
    useEffect(() => {
@@ -80,7 +83,7 @@ const Impact = () => {
                      style={{
                         width: '100%',
                         minWidth: '350px',
-                        
+
                      }}
                   />
                </Grid>
@@ -108,6 +111,39 @@ const Impact = () => {
                         MainCardContent.imgURL
                      }
                   />
+               </Grid>
+
+               <Grid item xs={24} sx={{ margin: '40px 0px' }} >
+                  <Box>
+                     <Divider></Divider>
+                  </Box>
+               </Grid>
+
+               <Grid item xs={24}>
+                  <Box width={'100%'} display={'center'}
+                     sx={{
+                        justifyContent:
+                           'center'
+                     }}>
+                     <Typography variant='h5'>
+                        Hasta ahora, hemos donado:
+                     </Typography>
+                  </Box>
+               </Grid>
+
+               <Grid item xs={24}>
+                  <Box width={'100%'} display={'center'}
+                     sx={{
+                        justifyContent:
+                           'center'
+                     }}
+                  >
+                     <Typography variant='h5'>
+                        <MoralisProvider appId={'1lcc8oJfE3QD5Bq0GzDEliMLgfR4Eb2XrlIxgXt5'} serverUrl={'https://lk9bpdyn1vsq.usemoralis.com:2053/server'}>
+                           <MoralisBDQuery />
+                        </MoralisProvider>
+                     </Typography>
+                  </Box>
                </Grid>
 
                <Grid item xs={24} sx={{ margin: '40px 0px' }} >
