@@ -19,7 +19,7 @@ const MoralisBDQuery = () => {
                 setAmountDonated(res.get('amountDonated')); 
             },
             (error) => {
-                setAmountDonated('Mucho')
+                setAmountDonated('15000000')
             }
         )
     }
