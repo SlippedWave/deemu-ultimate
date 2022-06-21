@@ -114,7 +114,7 @@ export const Poll = () => {
           setCurrentPoll(doc.data())
           setResData(doc.data().votesArr);
           setTotalVotes(doc.data().totalVotes);
-          // serverTime= doc.data().timestamp.toDate()
+          serverTime= doc.data().timestamp.toDate()
           if(doc.data().timestamp.toDate() >= doc.data().timestamp.toDate().addDays(30)
           ){
             resetCollection(doc.data())
