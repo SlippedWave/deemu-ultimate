@@ -10,16 +10,6 @@ import {
    toastSuccess,
  } from '../Helpers/alerts';
 
-export const logout = async () => {
-   try {
-      const response = await signOut(auth);
-      toastSuccess('Sesión terminada');
-   } catch (error) {
-      const msg = getErrorMessage(error);
-      toastError(msg);
-   }
-};
-
 const getErrorMessage = (error) => {
    const code = error.code;
  
