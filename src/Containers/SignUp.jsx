@@ -74,19 +74,6 @@ const SignUp = () => {
   }, []);
 
   useEffect(() => {
-    console.log(recordUserAge,
-      recordConfirmedPassword,
-      recordUserFirstName,
-      recordUserLastName,
-      recordUserEmail,
-      recordUserPassword,
-      userFirstNameCode,
-      userLastNameCode,
-      userAgeCode,
-      userEmailCode,
-      userPasswordCode,
-      confirmedPasswordCode,
-      !loading);
     if (userFirstNameCode === 0 &&
       userLastNameCode === 0 && userAgeCode === 0 &&
       userEmailCode === 0 && userPasswordCode === 0 &&
