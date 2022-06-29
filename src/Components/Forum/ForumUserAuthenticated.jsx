@@ -5,9 +5,6 @@ import { auth } from "../../Firebase/settings"; import MainSection from "./MainS
 import { Poll } from './Poll.js'
 
 const ForumUserAuthenticated = () => {
-    useEffect(() => {
-        console.log(auth.currentUser.uid);
-    }, [])
     return (
         <Box style={{ paddingTop: '80px' }} >
             <h1 style={{ textAlign: 'center' }} >DEEMU Forum</h1>
