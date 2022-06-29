@@ -17,33 +17,34 @@ import { useDispatch } from "react-redux"
 import { signInAPI } from "../../store/actions"
 
 const LogInModal = () => {
-   const [open, setOpen] = React.useState(false);
-   const handleOpenClose = () => setOpen(!open);
-   const dispatch= useDispatch()
+const [open, setOpen] = React.useState(false);
+const handleOpenClose = () => setOpen(!open);
+const dispatch= useDispatch()
 
-   const [loading, setLoading] = useState(false);
+const [loading, setLoading] = useState(false);
 
-   const [userEmail, setUserEmail] =
-      React.useState('');
-   const [userPassword, setUserPassword] =
-      React.useState('');
+const [userEmail, setUserEmail] =
+React.useState('');
+const [userPassword, setUserPassword] =
+React.useState('');
 
-   const [showPassword, setPasswordVisibility] =
-      React.useState(false);
-   const handleClickShowPassword = () =>
-      setPasswordVisibility(!showPassword);
+const [showPassword, setPasswordVisibility] =
+React.useState(false);
+const handleClickShowPassword = () =>
+setPasswordVisibility(!showPassword);
 
-   const handleMouseDownPassword = (event) => {
-      event.preventDefault();
-   };
+const handleMouseDownPassword = (event) => {
+event.preventDefault();
+};
 
-   async function handleSubmit(e) {
-      e.preventDefault();
+async function handleSubmit(e) {
+   e.preventDefault();
+   setLoading(true)
 
-      dispatch(signInAPI(userEmail, userPassword))
+   dispatch(signInAPI(userEmail, userPassword))
 
-      setLoading(false)
-   }
+   setLoading(false)
+}
 
    const style = {
       position: 'absolute',
